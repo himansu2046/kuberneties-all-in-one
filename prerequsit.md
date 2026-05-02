@@ -18,3 +18,21 @@ sudo mv kubectl /usr/local/bin/
 
 # Verify
 kubectl version --client
+
+# Update system
+sudo apt update -y
+
+# Install dependencies
+sudo apt install -y unzip curl
+
+# Download AWS CLI
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+
+# Extract
+unzip awscliv2.zip
+
+# Install
+sudo ./aws/install
+
+# Verify
+aws --version
