@@ -46,7 +46,7 @@ It allows the cluster to create and manage AWS resources securely using IAM role
 
 ```bash
 eksctl utils associate-iam-oidc-provider \
-  --region=us-west-2 \
+  --region=eu-west-1 \
   --cluster=my-cluster \
   --approve
 ```
