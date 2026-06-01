@@ -7,7 +7,7 @@ This command creates an EKS cluster with only the control plane (no worker nodes
 ```bash
 eksctl create cluster \
   --name=my-cluster \
-  --region=us-west-2 \
+  --region=eu-west-1 \
   --version=1.33 \
   --without-nodegroup
 ```
