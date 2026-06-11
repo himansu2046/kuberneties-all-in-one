@@ -25,15 +25,16 @@ eksctl utils associate-iam-oidc-provider --cluster $cluster_name --approve
 ## Download IAM policy
 
 ```
-curl -O https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.11.0/docs/install/iam_policy.json
+curl -o iam_policy.json \
+https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/main/docs/install/iam_policy.json
 ```
 
 Create IAM Policy
 
 ```
-aws iam create-policy \
-    --policy-name AWSLoadBalancerControllerIAMPolicy \
-    --policy-document file://iam_policy.json
+aws iam create-policy-version \
+  --policy-arn arn:aws:iam::614817375799:policy/AWSLoadBalancerControllerIAMPolicy \
+  --policy-document file://iam_policy.json
 ```
 
 Create IAM Role
